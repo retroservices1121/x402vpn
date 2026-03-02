@@ -1,0 +1,27 @@
+{
+  "name": "x402vpn",
+  "version": "1.0.0",
+  "description": "VPN access via x402 micropayments. Pay USDC on Base, get VPN credentials. No signups, no API keys.",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "example": "node examples/client.js"
+  },
+  "keywords": ["x402", "vpn", "usdc", "base", "micropayments", "crypto"],
+  "license": "MIT",
+  "dependencies": {
+    "@x402/express": "^2.5.0",
+    "@x402/evm": "^2.5.0",
+    "@x402/core": "^2.5.0",
+    "express": "^4.21.0",
+    "dotenv": "^16.4.0"
+  },
+  "devDependencies": {
+    "@x402/fetch": "^2.5.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
