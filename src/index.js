@@ -44,8 +44,13 @@ const app = express();
 app.use(express.json());
 
 // --- x402 Payment Middleware ---
+const isMainnet = NETWORK === "eip155:8453";
+const facilitatorUrl = isMainnet
+  ? "https://x402.coinbase.com/facilitator"
+  : "https://www.x402.org/facilitator";
+
 const facilitatorClient = new HTTPFacilitatorClient({
-  url: "https://www.x402.org/facilitator",
+  url: facilitatorUrl,
 });
 
 const resourceServer = new x402ResourceServer(facilitatorClient)
